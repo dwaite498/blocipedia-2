@@ -8,6 +8,11 @@ require 'random_data'
     )
 end
 
+User.create!(
+    email: "Test@email.com",
+    password: "password"
+    )
+
 wikis = Wiki.all
 
 puts "seed finished"
