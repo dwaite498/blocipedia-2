@@ -25,8 +25,29 @@ class WikisController < ApplicationController
   end
 
   def edit
+    @wikis = Wiki.find(params[:id])
+  end
+  
+  def update
+    @wikis = Wiki.find(params[:id])
+    @wikis.title = params[:wiki][:title]
+    @wikis.body = params[:wiki][:body]
+    
+    if @wikis.save
+      redirect_to @wikis
+    else
+      flash.now[:alert] = "There was an error updating the wiki, please try again."
+      render :edit
+    end
   end
 
-  def delete
+  def destroy
+    @wikis = Wiki.find(params[:id])
+    
+    if @wikis.destroy
+      redirect_to wikis_path
+    else
+      render :show
+    end
   end
 end
