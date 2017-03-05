@@ -14,6 +14,6 @@ User.create!(
     )
 
 wikis = Wiki.all
-
 puts "seed finished"
+puts "#{User.first.email} user created"
 puts "#{Wiki.count} wikis created"
