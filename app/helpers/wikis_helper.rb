@@ -1,6 +1,6 @@
 module WikisHelper
   
   def wiki_is_private?
-    current_user.id == @wikis.user
+    @wiki.user == current_user
   end
 end
