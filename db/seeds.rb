@@ -4,20 +4,13 @@ require 'random_data'
 10.times do
     Wiki.create!(
         title: RandomData.random_name,
-        body: RandomData.random_paragraph,
-        private: false
+        body: RandomData.random_paragraph
     )
 end
 
 User.create!(
     email: "Test@email.com",
-    password: "password",
-    role: "admin"
-    )
-    
-User.create!(
-    email: "dhammer@email.com",
-    password: 'password',
+    password: "password"
     )
 
 wikis = Wiki.all
