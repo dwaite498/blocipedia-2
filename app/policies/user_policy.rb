@@ -10,8 +10,5 @@ class UserPolicy
     @current_user.admin?
   end
   
-  def user_not_authorized
-    flash[:alert] = "Access Denied"
-    redirect_to (request.referrer || root_path)
-  end
+
 end
