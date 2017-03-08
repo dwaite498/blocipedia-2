@@ -34,6 +34,7 @@ class WikisController < ApplicationController
     @wikis = Wiki.find(params[:id])
     @wikis.title = params[:wiki][:title]
     @wikis.body = params[:wiki][:body]
+    @wikis.private = params[:wiki][:private]
     
     if @wikis.save
       redirect_to @wikis
