@@ -6,8 +6,8 @@ class UserPolicy
     @user = model
   end
   
-  def index?
-    @current_user.admin?
+  def update?
+    current_user.admin?
   end
   
 

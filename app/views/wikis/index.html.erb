@@ -10,11 +10,7 @@
     <div class="media-body">
         <h4 class="media-heading">
             <% @wikis.each do |wiki| %>
-                <% if wiki.private? %>
-                    
-                <% else %>
-                    <p><%= link_to wiki.title, wiki %></p>
-                <% end %>
+                <p><%= link_to wiki.title, wiki %></p>
             <% end %>  
         </h4>
     </div>

@@ -1,21 +1,21 @@
 class WikiPolicy < ApplicationPolicy
-  attr_reader :user, :wiki
-  
-  def initialize(user, wiki)
-    @user = user
-    @wikis = wiki
-  end
-  
-  def index?
-    current_user.admin
-  end
-  
-  def update?
-    user.admin? or wiki.private
-  end
-  class Scope < Scope
-    def resolve
-      scope
+  class Scope
+    attr_reader :user, :scope
+    
+    def initialize(user, scope)
+      @user = user
+      @scope = scope
     end
+    
+    def resolve
+      if user.admin?
+        scope.all
+      else
+        scope.where(private: false)
+      end
+    end
+  end
+  def index?
+    user
   end
 end
