@@ -12,6 +12,7 @@ class WikiPolicy < ApplicationPolicy
         scope.all
       else
         scope.where(private: false)
+        scope.where(wikis: user)
       end
     end
   end

@@ -4,7 +4,7 @@ require 'random_data'
 User.create!(
     email: "Test@email.com",
     password: "password",
-    role: 'user'
+    role: 'admin'
     )
 
 10.times do
@@ -15,9 +15,9 @@ User.create!(
 end
 
 User.create!(
-    email: 'dhammer@blocipedia.com',
+    email: 'test2@email.com',
     password: 'password',
-    role: 'admin'
+    role: 'user'
     )
 users = User.all
 
