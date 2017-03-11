@@ -3,6 +3,22 @@ class WikiPolicy < ApplicationPolicy
     user
   end
   
+  # def show?
+  #   user.admin? || record.user == user
+  # end
+  
+  def update?
+    user.present?
+  end
+  
+  def create?
+    user.present?
+  end
+  
+  def new?
+    user.present?
+  end
+  
   def destroy?
     user.role == 'admin' || record.user == user
   end
