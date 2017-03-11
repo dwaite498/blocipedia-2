@@ -7,12 +7,12 @@ User.create!(
     role: 'admin'
     )
 
-10.times do
-    User.create!(
-    email: RandomData.random_email,
-    password: 'password'
-    )
-end
+# 10.times do
+#     User.create!(
+#     email: RandomData.random_email,
+#     password: 'password'
+#     )
+# end
 
 User.create!(
     email: 'test2@email.com',
@@ -21,13 +21,27 @@ User.create!(
     )
 users = User.all
 
+Wiki.create!(
+        title: 'first wiki',
+        body: RandomData.random_paragraph,
+        user: users.sample,
+        private: [true, false].sample
+    )
+    
+Wiki.create!(
+        title: 'second wiki',
+        body: RandomData.random_paragraph,
+        user: users.sample,
+        private: [true, false].sample
+    )
+
 # create wikis
 10.times do
     Wiki.create!(
         title: RandomData.random_name,
         body: RandomData.random_paragraph,
         user: users.sample,
-        private: false
+        private: [true, false].sample
     )
 end
 

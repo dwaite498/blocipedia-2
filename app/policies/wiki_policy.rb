@@ -1,4 +1,12 @@
 class WikiPolicy < ApplicationPolicy
+  def index?
+    user
+  end
+  
+  def destroy?
+    user.role == 'admin' || record.user == user
+  end
+  
   class Scope
     attr_reader :user, :scope
     
@@ -8,15 +16,27 @@ class WikiPolicy < ApplicationPolicy
     end
     
     def resolve
-      if user.admin?
-        scope.all
+      wikis = []
+      if user.role == 'admin'
+        wikis = scope.all
+      elsif user.role == 'premium'
+        all_wikis = scope.all
+        all_wikis.each do |wiki|
+          if !wiki.private? || wiki.user == user
+            wikis << wiki
+          end
+        end
       else
-        scope.where(private: false)
-        scope.where(wikis: user)
+        all_wikis = scope.all
+        wikis = []
+        all_wikis.each do |wiki|
+          if !wiki.private?
+            wikis << wiki
+          end
+        end
       end
+      wikis
     end
   end
-  def index?
-    user
-  end
+
 end
