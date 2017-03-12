@@ -24,13 +24,12 @@
         <%= f.submit 'Save', class: 'btn btn-success' %>
         <%= link_to 'Cancel', wiki_path , class: 'btn btn-danger' %>
       </div>
-      <% if user_is_premium? %>
+      <% if @should_show_private_checkbox %>
         <div class="form-group">
-          <%= f.label :private, class: 'checkbox' do %>
+          <%= f.label :private, class: 'checkbox' %>
           <%= f.check_box :private %> Change to Private Wiki
+        </div>
       <% end %>
-      <% end %>
-      </div>
-      <% end %>
+    <% end %>
   </div>
 </div>
