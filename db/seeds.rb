@@ -17,6 +17,12 @@ User.create!(
 User.create!(
     email: 'test2@email.com',
     password: 'password',
+    role: 'premium'
+    )
+    
+User.create!(
+    email: 'test3@email.com',
+    password: 'password',
     role: 'user'
     )
 users = User.all

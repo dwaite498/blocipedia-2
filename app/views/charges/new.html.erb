@@ -1,4 +1,7 @@
  <%= form_tag charges_path do %>
-   <h4>Click the button!</h4>
+   <h2>Upgrade Account!</h2>
+   <p>An upgraded account can make private wiki's that only you , and those invited, can see and edit.</p>
+   <h4>Upgrading to a premium account is an one time fee of $15.00 and is non refundable.</h4>
    <script class='stripe-button' src="https://checkout.stripe.com/checkout.js" data-key="<%= @stripe_btn_data[:key] %>" data-amount="<%= @stripe_btn_data[:amount] %>" data-description="<%= @stripe_btn_data[:description] %>" ></script>
+   <%= link_to 'Cancel', root_path, class: 'btn btn-danger' %>
  <% end %>

@@ -12,5 +12,13 @@ class User < ActiveRecord::Base
     self.role ||= :user
   end
   
+  def downgrade_account
+    self.role = 'user'
+    wikis = self.wikis
+    wikis.each do |wiki|
+      wiki.private == false
+    end
+  end
+  
   before_save {  self.role ||= :user }         
 end

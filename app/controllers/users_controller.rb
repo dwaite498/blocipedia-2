@@ -8,8 +8,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    authorize @user
+    @user = current_user
+  end
+  
+  def downgrade
+    @downgrade = 'downgrade'
   end
 
   def update
