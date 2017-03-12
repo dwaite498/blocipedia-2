@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
     self.role = 'user'
     wikis = self.wikis
     wikis.each do |wiki|
-      wiki.private == false
+      wiki.private = false
     end
   end
   

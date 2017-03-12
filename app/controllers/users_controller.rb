@@ -10,10 +10,6 @@ class UsersController < ApplicationController
   def show
     @user = current_user
   end
-  
-  def downgrade
-    @downgrade = 'downgrade'
-  end
 
   def update
     @user = User.find(params[:id])

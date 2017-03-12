@@ -20,11 +20,13 @@
         <%= f.label :body %> <h6>Must be at least 25 characters.</h6>
         <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: 'Enter Body' %>
       </div>
+      <% if user_is_premium? %>
       <div class="form-group">
         <%= f.label :private, class: 'checkbox' do %>
           <%= f.check_box :private %> Private Wiki
         <% end %>
       </div>
+      <% end %>
       <div class='form=group'>
         <%= f.submit 'Save', class: 'btn btn-success' %>
       </div>
