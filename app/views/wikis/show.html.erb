@@ -3,7 +3,9 @@
 <%= link_to 'Delete Wiki', @wiki, method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure you would like to delete this wiki?" } %>
 <div class='row'>
   <div class='col-md-8'>
-    <p><%= @wikis.body %></p>
+    <p>
+      <%= markdown(@wikis.body) %>
+    </p>
     <p>Created by:<%= @wikis.user_id %></p>
     <p>Private Wiki:<%= @wikis.private %></p>
   </div>
