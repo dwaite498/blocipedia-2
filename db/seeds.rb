@@ -41,6 +41,17 @@ Wiki.create!(
         private: [true, false].sample
     )
 
+Wiki.create!(
+  title: "My Very First Post",
+  body:
+  %Q{### There Is Something You Should Know!
+
+  This is my very first post using markdown!
+
+  How do you like it?  I learned this from [RichOnRails.com](http://richonrails.com/articles/rendering-markdown-with-redcarpet)!},
+  user: users.sample,
+  private: false
+)
 # create wikis
 10.times do
     Wiki.create!(
