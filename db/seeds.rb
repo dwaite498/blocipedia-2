@@ -27,31 +27,32 @@ User.create!(
     )
 users = User.all
 
-Wiki.create!(
-        title: 'first wiki',
-        body: RandomData.random_paragraph,
-        user: users.sample,
-        private: [true, false].sample
-    )
+# Wiki.create!(
+#         title: 'first wiki',
+#         body: RandomData.random_paragraph,
+#         user: users.sample,
+#         private: [true, false].sample
+#     )
     
 Wiki.create!(
         title: 'second wiki',
         body: RandomData.random_paragraph,
-        user: users.sample,
+        user: users.first,
         private: [true, false].sample
     )
 
-Wiki.create!(
-  title: "My Very First Post",
-  body:
-  %Q{### There Is Something You Should Know!
+# Wiki.create!(
+#   title: "My Very First Post",
+#   body:
+#   %Q{### There Is Something You Should Know!
 
-  This is my very first post using markdown!
+#   This is my very first post using markdown!
 
-  How do you like it?  I learned this from [RichOnRails.com](http://richonrails.com/articles/rendering-markdown-with-redcarpet)!},
-  user: users.sample,
-  private: false
-)
+#   How do you like it?  I learned this from [RichOnRails.com](http://richonrails.com/articles/rendering-markdown-with-redcarpet)!},
+#   user: collaborations.users.sample,
+#   private: false
+# )
+
 # create wikis
 10.times do
     Wiki.create!(
@@ -62,8 +63,17 @@ Wiki.create!(
     )
 end
 
-
 wikis = Wiki.all
+
+5.times do
+   Collaboration.create!(
+       user: users.sample,
+       wiki: wikis.sample
+       ) 
+    end
+
+
+
 puts "seed finished"
 puts "#{User.first.email} user created"
 puts "#{Wiki.count} wikis created"

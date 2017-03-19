@@ -27,9 +27,11 @@ class WikisController < ApplicationController
   end
 
   def edit
+    @users = User.all
     @wikis = Wiki.find(params[:id])
     authorize @wikis
     @should_show_private_checkbox = current_user.premium? && @wikis.user == current_user
+    @wiki_owner = @wikis.user == current_user
   end
   
   def update

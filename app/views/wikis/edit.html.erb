@@ -21,7 +21,7 @@
         <%= f.label :body %> <h6>Must be at least 25 characters.</h6>
         <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: 'Enter Body' %>
       </div>
-      <div class='form=group'>
+      <div class='form-group'>
         <%= f.submit 'Save', class: 'btn btn-success' %>
         <%= link_to 'Cancel', wiki_path , class: 'btn btn-danger' %>
       </div>
@@ -31,6 +31,18 @@
           <%= f.check_box :private %> Change to Private Wiki
         </div>
       <% end %>
+      <div class='form-group'>
+        <% if @wiki_owner %>
+        <p>Choose collaborators</p>
+          <select name="user_id">
+            <%= @users.each do |user| %>
+            <option value="<%= user.id %>"><%= user.email %></option>
+            
+          <% end %>
+          </select>
+        <% end %>
+      </div>
     <% end %>
+    
   </div>
 </div>
