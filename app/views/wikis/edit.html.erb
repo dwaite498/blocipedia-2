@@ -37,7 +37,6 @@
           <select name="user_id">
             <%= @users.each do |user| %>
             <option value="<%= user.id %>"><%= user.email %></option>
-            
           <% end %>
           </select>
         <% end %>
