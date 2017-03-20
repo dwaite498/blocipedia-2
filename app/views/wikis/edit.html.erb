@@ -31,16 +31,7 @@
           <%= f.check_box :private %> Change to Private Wiki
         </div>
       <% end %>
-      <div class='form-group'>
-        <% if @wiki_owner %>
-        <p>Choose collaborators</p>
-          <select name="user_id">
-            <%= @users.each do |user| %>
-            <option value="<%= user.id %>"><%= user.email %></option>
-          <% end %>
-          </select>
-        <% end %>
-      </div>
+ 
     <% end %>
     
   </div>

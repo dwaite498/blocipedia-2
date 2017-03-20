@@ -1,6 +1,7 @@
 <h1><%= @wikis.title %></h1>
 <%= link_to 'Edit Wiki', edit_wiki_path, class: 'btn btn-default' %>
 <%= link_to 'Delete Wiki', @wiki, method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure you would like to delete this wiki?" } %>
+<%= link_to 'Collaborations', wiki_collaborations_path(@wikis), class: 'btn btn-default' %>
 <div class='row'>
   <div class='col-md-8'>
     <p>

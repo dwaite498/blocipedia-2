@@ -1,0 +1,7 @@
+<h1> Collaborators</h1>  
+  <%= link_to 'Add Collaborator', new_wiki_collaboration_path, class: 'btn btn-default' %>
+  <ul>
+    <% @collaborations.each do |c| %>
+      <li><%= c.user.email  %> <%= link_to 'X', wiki_collaboration_path(c.wiki, c), method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure you would like to delete this collaboration?" } %></li>
+    <% end %>
+  </ul>

@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  get 'collaborations/create'
-
-  get 'collaborations/destroy'
 
   devise_for :users
-  resources :wikis
+  resources :wikis do
+    resources :collaborations, except: [:show, :edit, :update]
+  end
   resources :users
 
   get 'about' => 'welcome#about'
