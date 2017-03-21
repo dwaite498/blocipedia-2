@@ -1,10 +1,16 @@
 class CollaborationsController < ApplicationController
   def create
     @collaboration = Collaboration.new
+    @wiki = Wiki.find(params[:wiki_id])
     @collaboration.wiki_id = params[:wiki_id]
     @collaboration.user_id = params[:collaboration][:user_id]
-    @collaboration.save
-    redirect_to wiki_collaborations_path
+    if @wiki.collaborations.include?(:id)
+      flash[:alert] = "This user is already collaborating on this wiki, please choose another user"
+      render :new
+    else
+      @collaboration.save
+      redirect_to wiki_collaborations_path
+    end
   end
   
   def edit
