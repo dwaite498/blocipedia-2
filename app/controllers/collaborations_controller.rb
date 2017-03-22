@@ -4,9 +4,9 @@ class CollaborationsController < ApplicationController
     @wiki = Wiki.find(params[:wiki_id])
     @collaboration.wiki_id = params[:wiki_id]
     @collaboration.user_id = params[:collaboration][:user_id]
-    if @wiki.collaborations.include?(:id)
+    if @wiki.collaborations.any?{ |c| c.user.id == @collaboration.user_id}
       flash[:alert] = "This user is already collaborating on this wiki, please choose another user"
-      render :new
+      redirect_to wiki_collaborations_path
     else
       @collaboration.save
       redirect_to wiki_collaborations_path
