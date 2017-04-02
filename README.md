@@ -6,7 +6,7 @@ their account, they may make private wiki's that are visible only to them and th
 
 ## Built With
 
-* [Ruby on Rails] - The web framework used
+* Ruby on Rails
 
 ## Authors
 
