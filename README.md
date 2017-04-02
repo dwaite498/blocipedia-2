@@ -1,24 +1,21 @@
+# Blocipedia
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+This is a wiki collaboration project that allows users to create short wiki's and collaborate with eachother to make sure the inidividual entries are accurate.
+Upon registration with a free account, users are able to see all public wiki's and may edit any of the entries they can see. Once a user upgrades
+their account, they may make private wiki's that are visible only to them and those who they choose to be collaborators.
 
+## Built With
 
-Welcome to your Rails project on Cloud9 IDE!
+* [Ruby on Rails] - The web framework used
 
-To get started, just do the following:
+## Authors
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://blocipedia-2-dwaite498.c9users.io/).
+* **David Waite** - (https://www.linkedin.com/in/david-waite2017/)
 
-Happy coding!
-The Cloud9 IDE team
+## License
 
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Support & Documentation
+## Acknowledgments
 
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+* This project was made as a part of the Bloc.io curriculum.
