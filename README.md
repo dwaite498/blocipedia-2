@@ -4,6 +4,13 @@ This is a wiki collaboration project that allows users to create short wiki's an
 Upon registration with a free account, users are able to see all public wiki's and may edit any of the entries they can see. Once a user upgrades
 their account, they may make private wiki's that are visible only to them and those who they choose to be collaborators.
 
+![Blocipedia login](https://github.com/dwaite498/blocipedia-2/blob/master/blocipedia%20login.png)
+
+![Blocipedia wiki list with test data](https://github.com/dwaite498/blocipedia-2/blob/master/blocipedia%20wiki%20list%20with%20test%20data.png)
+
+![Blocipedia login](https://github.com/dwaite498/blocipedia-2/blob/master/blocipedia%20login.png)
+
+![Blocipedia collaboration page](https://github.com/dwaite498/blocipedia-2/blob/master/blocipedia%20wiki%20collaboration%20page.png)
 ## Built With
 
 * Ruby on Rails
