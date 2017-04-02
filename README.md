@@ -6,11 +6,14 @@ their account, they may make private wiki's that are visible only to them and th
 
 ![Blocipedia login](https://github.com/dwaite498/blocipedia-2/blob/master/blocipedia%20login.png)
 
+Once a user logs in they can enter the wiki list page and see all wiki's that are public or that they own or are a collaborator on.
+
 ![Blocipedia wiki list with test data](https://github.com/dwaite498/blocipedia-2/blob/master/blocipedia%20wiki%20list%20with%20test%20data.png)
 
-![Blocipedia login](https://github.com/dwaite498/blocipedia-2/blob/master/blocipedia%20login.png)
+Once a user has selected a wiki they can either edit the wiki or, if they are the owner or an admin, add or remove collaborators from the project, updating the lsit of those with read/edit priviliges.
 
 ![Blocipedia collaboration page](https://github.com/dwaite498/blocipedia-2/blob/master/blocipedia%20wiki%20collaboration%20page.png)
+
 ## Built With
 
 * Ruby on Rails
