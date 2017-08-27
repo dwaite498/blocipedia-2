@@ -15,7 +15,7 @@ Once a user has selected a wiki they can either edit the wiki or, if they are th
 ![Blocipedia collaboration page](https://github.com/dwaite498/blocipedia-2/blob/master/blocipedia%20wiki%20collaboration%20page.png)
 
 ## Deployed at:
-https://limitless-coast-63079.herokuapp.com/
+https://stormy-chamber-87914.herokuapp.com/users/sign_in
 
 ## Built With
 
